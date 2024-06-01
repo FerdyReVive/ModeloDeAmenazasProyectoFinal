@@ -7,7 +7,20 @@
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Diego Cardone"
+      },
+      {
+        "name": "Luis Elizalde"
+      },
+      {
+        "name": "Luis Andrade"
+      },
+      {
+        "name": "Daniel Mongeote"
+      }
+    ],
     "diagrams": [],
     "diagramTop": 0,
     "reviewer": "Guillermo Vera",
