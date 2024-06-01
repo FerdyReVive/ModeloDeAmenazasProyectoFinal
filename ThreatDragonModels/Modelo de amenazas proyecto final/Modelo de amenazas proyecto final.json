@@ -1,0 +1,16 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Modelo de amenazas proyecto final",
+    "owner": "Ferdy Reyes",
+    "description": "El sistema permite a los usuario visualizar peliculas registradas en el sistema en caso de que sean un usuario comun, o administrar las peliculas y categorias regsitradas dentro del sistema.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Guillermo Vera",
+    "threatTop": 0
+  }
+}
