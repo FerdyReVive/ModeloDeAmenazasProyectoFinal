@@ -21,8 +21,19 @@
         "name": "Daniel Mongeote"
       }
     ],
-    "diagrams": [],
-    "diagramTop": 0,
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Diagrama de flujo del sistema",
+        "diagramType": "Generic",
+        "placeholder": "New generic diagram description",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "version": "2.2.0",
+        "cells": [],
+        "description": "Diagrama de flujo del sistema en general"
+      }
+    ],
+    "diagramTop": 1,
     "reviewer": "Guillermo Vera",
     "threatTop": 0
   }
