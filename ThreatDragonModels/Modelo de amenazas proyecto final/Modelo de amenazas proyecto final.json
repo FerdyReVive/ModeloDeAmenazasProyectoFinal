@@ -3,7 +3,7 @@
   "summary": {
     "title": "Modelo de amenazas proyecto final",
     "owner": "Ferdy Reyes",
-    "description": "El sistema permite a los usuario visualizar peliculas registradas en el sistema en caso de que sean un usuario comun, o administrar las peliculas y categorias regsitradas dentro del sistema.",
+    "description": "El sitio web de blockbuster es la primera implementación de un\nsitio web para brindar servicios en línea a los usuarios y administradores de blockbuster. \nComo esta es la primera implementación del sitio\nweb, la funcionalidad será limitada. Serán dos usuarios de la aplicación:\n1. Ususarios\n2. Administradores\nEl administrador y los usuarios podrán iniciar sesión y buscar peliculas, y los administradores \npodrán regsitrar categorias y peliculas al sistema.",
     "id": 0
   },
   "detail": {
