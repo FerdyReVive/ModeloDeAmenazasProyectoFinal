@@ -51,8 +51,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "8a84fcbe-a433-40e2-bce0-b086c874f439",
             "zIndex": 1,
+            "id": "8a84fcbe-a433-40e2-bce0-b086c874f439",
             "data": {
               "type": "tm.Actor",
               "name": "Usuario registrado",
@@ -63,58 +63,6 @@
               "providesAuthentication": true,
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Sistem request",
-              "description": "Peticion para el sistema",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "9f12c64e-613e-4d78-af80-7b5cafb89e67",
-            "source": {
-              "cell": "8a84fcbe-a433-40e2-bce0-b086c874f439"
-            },
-            "target": {
-              "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
-            },
-            "vertices": [
-              {
-                "x": 380,
-                "y": 110
-              },
-              {
-                "x": 450,
-                "y": 110
-              }
-            ],
-            "labels": [
-              "Sistem request"
-            ]
           },
           {
             "shape": "flow",
@@ -148,15 +96,15 @@
               "threats": []
             },
             "id": "1456c0c8-970b-497c-8777-a023b1d994b3",
+            "labels": [
+              "Sistem response"
+            ],
             "source": {
               "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
             },
             "target": {
               "cell": "8a84fcbe-a433-40e2-bce0-b086c874f439"
             },
-            "labels": [
-              "Sistem response"
-            ],
             "vertices": [
               {
                 "x": 350,
@@ -196,6 +144,9 @@
               "threats": []
             },
             "id": "4b725f98-fbdc-45c7-a9e7-1d3412e76a3a",
+            "labels": [
+              "Sistem response"
+            ],
             "source": {
               "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
             },
@@ -207,9 +158,6 @@
                 "x": 410,
                 "y": 230
               }
-            ],
-            "labels": [
-              "Sistem response"
             ]
           },
           {
@@ -244,6 +192,9 @@
               "threats": []
             },
             "id": "b6408dd5-0aca-4141-b247-da144d33e51d",
+            "labels": [
+              "Sistem request"
+            ],
             "source": {
               "cell": "2cb68bf0-e169-46a2-a0bd-7ea6b122341f"
             },
@@ -255,9 +206,6 @@
                 "x": 450,
                 "y": 270
               }
-            ],
-            "labels": [
-              "Sistem request"
             ]
           },
           {
@@ -292,15 +240,15 @@
               "threats": []
             },
             "id": "a0976463-08d6-417b-b61d-51fd0ba0bcbf",
+            "labels": [
+              "Operation\nrequest"
+            ],
             "source": {
               "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
             },
             "target": {
               "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
             },
-            "labels": [
-              "Operation\nrequest"
-            ],
             "vertices": [
               {
                 "x": 710,
@@ -340,6 +288,9 @@
               "threats": []
             },
             "id": "cc86fdb8-5a69-447b-bc47-41a0b3424edb",
+            "labels": [
+              "Operation\nresponse"
+            ],
             "source": {
               "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
             },
@@ -351,9 +302,6 @@
                 "x": 710,
                 "y": 200
               }
-            ],
-            "labels": [
-              "Operation\nresponse"
             ]
           },
           {
@@ -388,6 +336,9 @@
               "threats": []
             },
             "id": "6afe148e-d14d-44c5-9226-de3fec5933ce",
+            "labels": [
+              "Query response"
+            ],
             "source": {
               "cell": "45158c56-1825-4422-8f5b-dbe654bebab7"
             },
@@ -403,9 +354,6 @@
                 "x": 930,
                 "y": 230
               }
-            ],
-            "labels": [
-              "Query response"
             ]
           },
           {
@@ -440,6 +388,9 @@
               "threats": []
             },
             "id": "c0c03552-6742-421a-a225-a8d04c98ae63",
+            "labels": [
+              "Query"
+            ],
             "source": {
               "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
             },
@@ -455,9 +406,58 @@
                 "x": 830,
                 "y": 260
               }
-            ],
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "System request",
+              "description": "Peticion para el sistema",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "9f12c64e-613e-4d78-af80-7b5cafb89e67",
             "labels": [
-              "Query"
+              "System request"
+            ],
+            "source": {
+              "cell": "8a84fcbe-a433-40e2-bce0-b086c874f439"
+            },
+            "target": {
+              "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
+            },
+            "vertices": [
+              {
+                "x": 380,
+                "y": 110
+              },
+              {
+                "x": 450,
+                "y": 110
+              }
             ]
           },
           {
@@ -481,8 +481,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "2cb68bf0-e169-46a2-a0bd-7ea6b122341f",
             "zIndex": 11,
+            "id": "2cb68bf0-e169-46a2-a0bd-7ea6b122341f",
             "data": {
               "type": "tm.Actor",
               "name": "Usuario no registrado\n",
@@ -515,8 +515,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "8bc66462-a11c-4dcb-8b46-02d9e011018d",
             "zIndex": 12,
+            "id": "8bc66462-a11c-4dcb-8b46-02d9e011018d",
             "data": {
               "type": "tm.Process",
               "name": "Controlador\nFrontend",
@@ -552,8 +552,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "3a0db048-afc1-4052-94d9-e9ffb64da5a4",
             "zIndex": 13,
+            "id": "3a0db048-afc1-4052-94d9-e9ffb64da5a4",
             "data": {
               "type": "tm.Process",
               "name": "Controlador \nbackend",
@@ -592,8 +592,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "45158c56-1825-4422-8f5b-dbe654bebab7",
             "zIndex": 14,
+            "id": "45158c56-1825-4422-8f5b-dbe654bebab7",
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
