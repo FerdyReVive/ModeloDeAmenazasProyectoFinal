@@ -44,8 +44,8 @@
                 "text": "Usuario registrado"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -59,58 +59,24 @@
               "description": "Un usuario con una cuenta registrada dentro del sistema",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": true,
-              "threats": []
+              "threats": [
+                {
+                  "id": "7e63eec4-42e1-4edd-b249-54f3a795eeaa",
+                  "title": "Cross Site Request Forgery",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Permitir ataques que realicen acciones no deseadas en nombre de un usuario autenticado, como cambios de contraseña, transferencias de dinero o acciones administrativas no autorizadas.",
+                  "mitigation": "Mantener un log de las actividades de cada usuario en el sistema",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ]
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Operation\nrequest",
-              "description": "Peticion de operacion",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "a0976463-08d6-417b-b61d-51fd0ba0bcbf",
-            "labels": [
-              "Operation\nrequest"
-            ],
-            "source": {
-              "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
-            },
-            "target": {
-              "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
-            },
-            "vertices": [
-              {
-                "x": 710,
-                "y": 100
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -232,110 +198,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Query",
-              "description": "Peticion a la base de datos",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "c0c03552-6742-421a-a225-a8d04c98ae63",
-            "labels": [
-              "Query"
-            ],
-            "source": {
-              "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
-            },
-            "target": {
-              "cell": "45158c56-1825-4422-8f5b-dbe654bebab7"
-            },
-            "vertices": [
-              {
-                "x": 830,
-                "y": 220
-              },
-              {
-                "x": 830,
-                "y": 260
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "System request",
-              "description": "Peticion para el sistema",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "9f12c64e-613e-4d78-af80-7b5cafb89e67",
-            "labels": [
-              "System request"
-            ],
-            "source": {
-              "cell": "8a84fcbe-a433-40e2-bce0-b086c874f439"
-            },
-            "target": {
-              "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
-            },
-            "vertices": [
-              {
-                "x": 380,
-                "y": 110
-              },
-              {
-                "x": 450,
-                "y": 110
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "System response",
               "description": "Respuesta del sistema\n",
               "outOfScope": false,
@@ -416,7 +278,75 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "System request",
+              "description": "Peticion para el sistema",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "9ff416f4-eaee-47ac-aad1-9b4960d45ef7",
+                  "title": "Inyeccion SQL",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "El sistema puede ser atacado con entradas de usuario a traves de inyeccion de codigo",
+                  "mitigation": "Se hace una validacion de las entradas de los usuarios en el front end",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "9f12c64e-613e-4d78-af80-7b5cafb89e67",
+            "labels": [
+              "System request"
+            ],
+            "source": {
+              "cell": "8a84fcbe-a433-40e2-bce0-b086c874f439"
+            },
+            "target": {
+              "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
+            },
+            "vertices": [
+              {
+                "x": 380,
+                "y": 110
+              },
+              {
+                "x": 450,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -436,12 +366,26 @@
               "description": "Peticion al sistema",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "7f96100f-75c5-45b0-a656-49eb1779176b",
+                  "title": "Inyeccion SQL",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "El usuario puede hacer una inyeccion de codigo SQL en las entradas a traves del frontend",
+                  "mitigation": "Se validan las entradas de los usuarios por el frontend",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ]
             },
             "id": "b6408dd5-0aca-4141-b247-da144d33e51d",
             "labels": [
@@ -457,6 +401,163 @@
               {
                 "x": 450,
                 "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Servicios",
+              "description": "",
+              "outOfScope": true,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "4e016e0e-1a79-4c88-b4ee-9e34b4f71985",
+            "source": {
+              "cell": "09531333-3d85-45c6-9bc4-59610e93692a"
+            },
+            "target": {
+              "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
+            },
+            "labels": [
+              "Servicios"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query",
+              "description": "Peticion a la base de datos",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e045a503-0d1d-459d-95a4-643b258b4ebb",
+                  "title": "Inyeccion SQL",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Se puede ingresar inyeccion SQL a traves del backend",
+                  "mitigation": "Validar las entradas recibidas directamente por el backend",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "c0c03552-6742-421a-a225-a8d04c98ae63",
+            "labels": [
+              "Query"
+            ],
+            "source": {
+              "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
+            },
+            "target": {
+              "cell": "45158c56-1825-4422-8f5b-dbe654bebab7"
+            },
+            "vertices": [
+              {
+                "x": 830,
+                "y": 220
+              },
+              {
+                "x": 830,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Operation\nrequest",
+              "description": "Peticion de operacion",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a0976463-08d6-417b-b61d-51fd0ba0bcbf",
+            "labels": [
+              "Operation\nrequest"
+            ],
+            "source": {
+              "cell": "8bc66462-a11c-4dcb-8b46-02d9e011018d"
+            },
+            "target": {
+              "cell": "3a0db048-afc1-4052-94d9-e9ffb64da5a4"
+            },
+            "vertices": [
+              {
+                "x": 710,
+                "y": 100
               }
             ]
           },
@@ -528,7 +629,34 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "35d58323-8768-487e-a72f-0b3f5f97824f",
+                  "title": "Divulgacion de informacion sensible",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Se puede mostrar informacion al usuario que solo el administrador deberia tener acceso.",
+                  "mitigation": "Verificar las credenciales del usuario antes de acceder a informacion sensible con apoyo de los tokens.",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "b46292f4-b64c-434c-b15f-c959b365f7b4",
+                  "title": "Cross Site Scripting",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Permitir la inyección de scripts maliciosos en páginas web que se ejecutan en el navegador del usuario, lo que puede llevar al robo de datos sensibles, secuestro de sesiones o redirecciones a sitios maliciosos.",
+                  "mitigation": "Validar las rutas de acceso permitidas para los usurios y los privilegios de cada usuario",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -545,8 +673,8 @@
                 "text": "Controlador \nbackend"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -560,12 +688,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a5737e36-c73f-40aa-b49f-6b93696c047f",
+                  "title": "Ataque de denegacion de servicios",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Se pueden realizar consultas fuera de los limites de datos permitidos",
+                  "mitigation": "Hacer una validacion de las entradas recibidas al backend",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -608,6 +750,47 @@
               "storesInventory": true,
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 900,
+              "y": 10
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Application config"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "09531333-3d85-45c6-9bc4-59610e93692a",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Store",
+              "name": "Application config",
+              "description": "Archivo de configuracion de la aplicacion",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
           }
         ],
         "description": "Diagrama de flujo del sistema en general"
@@ -615,6 +798,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Guillermo Vera",
-    "threatTop": 0
+    "threatTop": 9
   }
 }
